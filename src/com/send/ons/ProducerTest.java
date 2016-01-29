@@ -45,6 +45,7 @@ public class ProducerTest {
 		        	break;
 		        }
 		    }
+		    producer.shutdown();
 		} catch (IOException e) {
 			logger.info("发送失败 了。。。。。。。。。。。。");
 			e.printStackTrace();
