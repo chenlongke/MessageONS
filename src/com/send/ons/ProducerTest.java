@@ -35,19 +35,19 @@ public class ProducerTest {
 		    Message msg = new Message(//Message Topic
 		            "Test-FG",
 		            //Message Tag,
-		            //¿ÉÀí½âÎªGmailÖĞµÄ±êÇ©£¬¶ÔÏûÏ¢½øĞĞÔÙ¹éÀà£¬·½±ãConsumerÖ¸¶¨¹ıÂËÌõ¼şÔÚONS·şÎñÆ÷¹ıÂË       
+		            //å¯ç†è§£ä¸ºGmailä¸­çš„æ ‡ç­¾ï¼Œå¯¹æ¶ˆæ¯è¿›è¡Œå†å½’ç±»ï¼Œæ–¹ä¾¿ConsumeræŒ‡å®šè¿‡æ»¤æ¡ä»¶åœ¨ONSæœåŠ¡å™¨è¿‡æ»¤       
 		            "TagA",
 		            //Message Body
-		            //ÈÎºÎ¶ş½øÖÆĞÎÊ½µÄÊı¾İ£¬ONS²»×öÈÎºÎ¸ÉÔ¤£¬ĞèÒªProducerÓëConsumerĞ­ÉÌºÃÒ»ÖÂµÄĞòÁĞ»¯ºÍ·´ĞòÁĞ»¯·½Ê½
+		            //ä»»ä½•äºŒè¿›åˆ¶å½¢å¼çš„æ•°æ®ï¼ŒONSä¸åšä»»ä½•å¹²é¢„ï¼Œéœ€è¦Producerä¸Consumeråå•†å¥½ä¸€è‡´çš„åºåˆ—åŒ–å’Œååºåˆ—åŒ–æ–¹å¼
 		            "Hello ONS".getBytes("utf-8"));
 		    msg.setKey("ORDERID_100");
 		    SendResult sendResult = producer.send(msg);
 	        System.out.println(sendResult);
 		} catch (FileNotFoundException e) {
-			// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
+			// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
+			// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
 			e.printStackTrace();
 		}
 	}
