@@ -22,9 +22,9 @@ public class ProducerTest {
 	private static final Logger logger = LoggerFactory.getLogger(ProducerTest.class.getName());
 	public static void main(String a[]){	
 		try {			
-			InputStream input = new FileInputStream(System.getProperty("user.dir")+"\\conf\\ons.properties");			
+			/*InputStream input = new FileInputStream(System.getProperty("user.dir")+"\\conf\\ons.properties");			
 			Properties pro = new Properties();
-			pro.load(input);
+			pro.load(input);*/
 			Properties properties = new Properties();
 			properties.put(PropertyKeyConst.ProducerId, "PID_162173622-101");
 			properties.put(PropertyKeyConst.AccessKey,"JqkUliuzNAjWHupu");
@@ -43,9 +43,6 @@ public class ProducerTest {
 		    msg.setKey("ORDERID_100");
 		    SendResult sendResult = producer.send(msg);
 	        System.out.println(sendResult);
-		} catch (FileNotFoundException e) {
-			// TODO 自动生成的 catch 块
-			e.printStackTrace();
 		} catch (IOException e) {
 			// TODO 自动生成的 catch 块
 			e.printStackTrace();
