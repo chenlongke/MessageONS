@@ -8,8 +8,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Properties;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import com.aliyun.openservices.ons.api.Message;
 import com.aliyun.openservices.ons.api.ONSFactory;
@@ -18,7 +18,7 @@ import com.aliyun.openservices.ons.api.PropertyKeyConst;
 import com.aliyun.openservices.ons.api.SendResult;
 
 public class ProducerTest {
-	private static final Logger logger = LoggerFactory.getLogger(ProducerTest.class.getName());
+	private static final Logger logger = LogManager.getLogger(ProducerTest.class.getName());
 	public static void main(String a[]){	
 		logger.info("我是好人哦~~~~~~~~");
 		try {	
