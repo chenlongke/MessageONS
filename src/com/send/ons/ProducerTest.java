@@ -21,7 +21,7 @@ public class ProducerTest {
 	private static final Logger logger = LoggerFactory.getLogger(ProducerTest.class.getName());
 	public static void main(String a[]){	
 		logger.info("我是好人哦~~~~~~~~");
-		try {			
+		try {	
 			Properties properties = new Properties();
 			properties.put(PropertyKeyConst.ProducerId, "PID_162173622-101");
 			properties.put(PropertyKeyConst.AccessKey,"JqkUliuzNAjWHupu");
@@ -43,8 +43,8 @@ public class ProducerTest {
 			    SendResult sendResult = producer.send(msg);
 		        logger.info("发送成功=========>"+sendResult);
 		        
-		        String sdf=new SimpleDateFormat("yyyy-MM-dd-HH-mm").format(new Date());
-		        if(sdf == "2015-01-29-12-00"){
+		        String sdf=new SimpleDateFormat("yyyy-MM-dd-HH").format(new Date());
+		        if(sdf == "2015-01-29-14"){
 		        	isrun = false;
 		        	break;
 		        }
