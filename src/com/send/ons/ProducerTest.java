@@ -3,10 +3,7 @@
  */
 package com.send.ons;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.Properties;
 
 import org.slf4j.Logger;
@@ -21,6 +18,7 @@ import com.aliyun.openservices.ons.api.SendResult;
 public class ProducerTest {
 	private static final Logger logger = LoggerFactory.getLogger(ProducerTest.class.getName());
 	public static void main(String a[]){	
+		logger.info("我是好人哦~~~~~~~~");
 		try {			
 			/*InputStream input = new FileInputStream(System.getProperty("user.dir")+"\\conf\\ons.properties");			
 			Properties pro = new Properties();
@@ -43,6 +41,7 @@ public class ProducerTest {
 		    msg.setKey("ORDERID_100");
 		    SendResult sendResult = producer.send(msg);
 	        System.out.println(sendResult);
+	        logger.info("我是好人哦~~~~~~~~");
 		} catch (IOException e) {
 			// TODO 自动生成的 catch 块
 			e.printStackTrace();
