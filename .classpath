@@ -15,7 +15,6 @@
 	<classpathentry kind="lib" path="lib/rocketmq-common-3.4.6.jar"/>
 	<classpathentry kind="lib" path="lib/rocketmq-remoting-3.4.6.jar"/>
 	<classpathentry kind="lib" path="lib/slf4j-api-1.7.5.jar"/>
-	<classpathentry kind="lib" path="lib/slf4j-simple-1.7.5.jar"/>
 	<classpathentry kind="lib" path="lib/slf4j-log4j12-1.7.5.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
