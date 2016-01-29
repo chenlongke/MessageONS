@@ -24,7 +24,7 @@ public class excute {
 			String key = message.getKey();
 			String top = message.getTopic();
 			String mid = message.getMsgID();
-			logger.info("得到消息||||||||"+content+"\t\tmessageID------------->" + mid + "\t\ttopic\t" + top + "\t\tkey=" + key + "\t\ttag=" + tag);
+			logger.info("得到消息----->"+content+"\t\tmessageID----->" + mid + "\t\ttopic----->" + top + "\t\tkey----->" + key + "\t\ttag----->" + tag);
 			
 		} catch (UnsupportedEncodingException e) {
 			// TODO 自动生成的 catch 块
