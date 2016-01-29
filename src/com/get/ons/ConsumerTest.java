@@ -2,15 +2,15 @@ package com.get.ons;
 
 import java.util.Properties;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import com.aliyun.openservices.ons.api.Consumer;
 import com.aliyun.openservices.ons.api.ONSFactory;
 import com.aliyun.openservices.ons.api.PropertyKeyConst;
 
 public class ConsumerTest {
-	private static final Logger logger = LoggerFactory.getLogger(MessageListenerAction.class.getName());
+	private static final Logger logger = LogManager.getLogger(MessageListenerAction.class.getName());
 	public static void main(String[] args) {
 		logger.info("start ------>ok");
         Properties properties = new Properties();
