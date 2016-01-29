@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+	<Appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{HH:mm:ss} [%level] %logger{36} - %msg%n" />
+		</Console>
+		<RollingFile name="rollingFileInfo" fileName="logs/tmcsub.log"
+			filePattern="logs/tmcsub-%d{yyyy-MM-dd-HH}.log">
+			<PatternLayout>
+				<Pattern>%d{HH:mm:ss} [%level] %logger{36} - %msg%n</Pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1"
+					modulate="true" />
+			</Policies>
+		</RollingFile>
+		<RollingFile name="rollingFileError" fileName="logs/tmcsub-error.log"
+			filePattern="logs/tmcsub-error-%d{yyyy-MM-dd}.log">
+			<PatternLayout>
+				<Pattern>%d{HH:mm:ss} [%level] %logger{36} - %msg%n</Pattern>
+			</PatternLayout>
+			<Filters>
+              <ThresholdFilter level="WARN" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" modulate="true" />
+			</Policies>
+		</RollingFile>
+	</Appenders>
+	<Loggers>
+		<Root level="INFO">
+			<AppenderRef ref="rollingFileInfo" />
+			<AppenderRef ref="rollingFileError" />
+		</Root>
+	</Loggers>
+</Configuration>
