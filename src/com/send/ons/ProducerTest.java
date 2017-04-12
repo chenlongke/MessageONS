@@ -24,8 +24,8 @@ public class ProducerTest {
 		try {	
 			Properties properties = new Properties();
 			properties.put(PropertyKeyConst.ProducerId, "PID_162173622-101");
-			properties.put(PropertyKeyConst.AccessKey,"JqkUliuzNAjWHupu");
-		    properties.put(PropertyKeyConst.SecretKey, "E0eXrLZV4jwKcyArf6xmF1cd73GxgV");
+			properties.put(PropertyKeyConst.AccessKey,"");
+		    properties.put(PropertyKeyConst.SecretKey, "");
 		    
 		    Producer producer = ONSFactory.createProducer(properties);
 		    producer.start();
